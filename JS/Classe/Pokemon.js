@@ -8,6 +8,8 @@ class Pokemon{
         this.array = [];
         this.mark = [];
         this.setInterval = 0;
+        this.pokemon = 0
+        this.$capture = $("#capture")
     }
     getName(){
         var pokedex = [
@@ -17,7 +19,6 @@ class Pokemon{
         ]
         var name = "";
         for(var pokedexe of pokedex){
-            console.log(pokedexe)
             if(this.number == pokedex.indexOf(pokedexe)){
                 name = pokedexe
             }
@@ -31,7 +32,8 @@ class Pokemon{
         var that = this
         for(var marke of this.mark){
             this.spawnInterval = setInterval(function(){
-                marke.setMap(null) 
+                marke.setMap(null)
+                that.mark.splice(that.mark.indexOf(marke),1)
             },11000)
         }
     }
@@ -49,7 +51,7 @@ class Pokemon{
                     anchor: new google.maps.Point(0, 0)
                 }
             }
-        }
+        }   
         console.log(this.array)
         return icon
     }
@@ -75,7 +77,23 @@ class Pokemon{
                 map: app.map
             });
             that.mark.push(marker);
+            that.pokemon = 
+            that.capture(name,marker)
+            that.setMapOnAll(null)
         });
+    }
+    setMapOnAll(map) {
+        for (var i = 0; i < this.mark.length; i++) {
+            this.mark[i].setMap(map);
+        }
+    }
+    capture(content, marker){
+        var that = this
+        marker.addListener("click", function(){
+            marker.setMap(null)
+            that.mark.splice(that.mark.indexOf(marker),1)
+            that.$capture.style.display = "flex";
+        })
     }
     /*Bulbasaur Ivysaur Venusaur 
     Charmander Charmeleon Charizard 

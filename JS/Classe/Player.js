@@ -1,40 +1,55 @@
 class Player{
     constructor(){
-        this.mark = [];
-
+        this.markers = [];
+        this.marker = 0;
+        this.cercle = 0;
     }
     addPlayer(){
+        var that = this
         var icon = this.getIconPlayer()
-        var features = this.getFeaturePlayer()
-        features.forEach(function(feature) {
+
+        this.getFeaturePlayer( function( feature ){
             var marker = new google.maps.Marker({
                 position: feature.position,
-                icon: icon[feature.type].icon,
-                map: app.map
+                icon: icon,
+                map: app.map,
             })
-            that.mark.push(marker);
-        })
+            that.marker = marker
+            that.markers.push(marker);
+            that.bindCercle(marker)
+        });
     }
     getIconPlayer(){
         var icon = {
-            icones: {
-                icon: '../pokemonGo/CSS/Images/Red.png',
-                scaledSize: new google.maps.Size(10, 10),
+                url: '../pokemonGo/CSS/Images/Red.png',
+                scaledSize: new google.maps.Size(50, 100),
                 origin: new google.maps.Point(0,0),
-                anchor: new google.maps.Point(0, 0)
-            }
+                anchor: new google.maps.Point(20, 50)
         }
         return icon
     }
-    getFeaturePlayer(){
+    getFeaturePlayer( callback ){
         navigator.geolocation.getCurrentPosition(function (position){
-            var features = [
+            var features = 
                 {
-                position: new google.maps.LatLng(position.coords.latitude,position.coords.longitude),
+                position: new google.maps.LatLng(position.coords.latitude, position.coords.longitude),
                 type: 'player'
                 }
-            ]
-            return features
+            ;
+            callback( features );
         })
+    }
+    initCercle(mark){
+        var optionsCercle = {
+            map: app.map,
+            radius: 100,
+            center: mark.position 
+        }
+        this.cercle = new google.maps.Circle( optionsCercle );
+        return this.cercle
+    }
+    bindCercle(mark){
+            var cercle = this.initCercle(mark)
+            cercle.bindTo("center" ,mark, "position" );
     }
 }
