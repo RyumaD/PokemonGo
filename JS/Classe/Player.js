@@ -21,7 +21,7 @@ class Player{
     }
     getIconPlayer(){
         var icon = {
-                url: '../pokemonGo/CSS/Images/Red.png',
+                url: '../pokemonGo/CSS/Images/layout/Red.png',
                 scaledSize: new google.maps.Size(50, 100),
                 origin: new google.maps.Point(0,0),
                 anchor: new google.maps.Point(20, 50)

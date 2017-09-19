@@ -1,0 +1,349 @@
+html{
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    background-image: url("Images/layout/pokewall.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+   }
+
+body{
+    margin: 0;
+    background-image: url("Images/layout/layoutmap.png");
+    background-repeat: no-repeat;
+    width: 1300px; 
+    height: 730px;
+}
+#map{
+    position: fixed !important;
+    width: 882px;
+    height: 539px;
+    z-index: 10;
+    top: 17px;
+    left: 14px;
+    border-radius: 2px;
+}
+#dex{
+    position: fixed;
+    width: 303px;
+    height: 170px;
+    z-index: 10;
+    top: 109px;
+    left: 950px;
+    background-image: url("Images/layout/poketest.gif");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-x: 60px;
+    background-color: white;
+    border-radius: 2px;
+
+}
+#spawn{
+    position: fixed;
+    width: 365px;
+    height: 109px;
+    z-index: 10;
+    top: 305px;
+    left: 919px;
+    border-radius: 2px;
+    background-image: url("Images/layout/mewspawn.gif");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: white;
+}
+#divevent{
+    position: fixed;
+    width: 360px;
+    height: 274px;
+    z-index: 10;
+    top: 442px;
+    left: 922px;
+    background-color:white;
+    border-radius: 2px;
+}
+#divevent h3{
+    text-align: center;
+}
+#type{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+    
+}
+#event input{
+    text-align: center;
+    width: 98%;
+    margin-bottom: 20px;
+}
+#event #sub{
+    width: 100%;
+}
+#pokedex{
+    display: none;
+    position: fixed !important;
+    width: 882px;
+    height: 539px;
+    z-index: 14;
+    top: 17px;
+    left: 14px;
+    border-radius: 2px;
+    background-image: url("Images/layout/layoutpokedex.gif");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: black;
+}
+#listage{
+    position: fixed;
+    top: 30px;
+    left: 30px;
+    z-index: 14;
+    overflow: auto;
+    width: 553px;
+    height: 404px;
+    color: white;
+}
+#listage li{
+    margin-bottom: 2px;
+}
+#imgpokemon{
+    position: fixed;
+    top: 47px;
+    left: 659px;
+    z-index: 14;
+    width: 210px;
+    height: 150px;
+}
+#astuce{
+    position: fixed;
+    top: 514px;
+    left: 14px;
+    z-index: 14;
+    width: 882px;
+    height: 42px;
+    color: white;
+    border-radius: 2px;
+    text-align: center
+}
+#capture{
+    position: fixed !important;
+    width: 640px;
+    height: 539px;
+    z-index: 11;
+    top: 17px;
+    left: 14px;
+    border-radius: 2px;
+    background-image: url("Images/layout/capture.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: black;
+    overflow-x: hidden;
+}
+#pokeball{
+    position: fixed !important;
+    width: 243px;
+    height: 158px;
+    z-index: 11;
+    top: 398px;
+    left: 653px;
+    border-radius: 2px;
+    background-color: black;
+}
+#pokeball{
+    position: fixed !important;
+    width: 236px;
+    height: 152px;
+    z-index: 11;
+    top: 398px;
+    left: 654px;
+    border-radius: 2px;
+    background-color: white;
+    border: 3px solid blue;
+    display: flex;
+    flex-wrap: wrap;
+}
+#cbttext{
+    position: fixed !important;
+    width: 634px;
+    height: 152px;
+    z-index: 12;
+    top: 398px;
+    left: 14px;
+    border-radius: 2px;
+    background-color: #3E6D83;
+    border: 3px solid red;
+}
+#menu{
+    position: fixed !important;
+    width: 236px;
+    height: 375px;
+    z-index: 11;
+    top: 17px;
+    left: 654px;
+    border-radius: 2px;
+    background-color: black;
+    border: 3px solid black;
+}
+#sacoche{
+    position: fixed !important;
+    width: 236px;
+    height: 375px;
+    z-index: 11;
+    top: 17px;
+    left: 654px;
+    border-radius: 2px;
+    background-color: grey;
+    border: 3px solid black;
+    display: flex;
+    display: none;
+}
+#sacoche form input{
+    color: #000000;
+    background-color: white;
+    width: 118px;
+    height: 76px;
+}
+#pokeball form input{
+        color: #000000;
+        background-color: white;
+        width: 118px;
+        height: 76px;
+}
+#pokemon{
+    position: fixed;
+    top: 120px;
+    left: 401px;
+    z-index: 12;
+    width: 210px;
+    height: 150px;
+    background-position-x: center;
+    background-position-y: bottom;
+    background-repeat: no-repeat;
+}
+#player{
+    position: fixed;
+    top: 210px;
+    left: 90px;
+    z-index: 12;
+    width: 170px;
+    height: 190px;
+    background-image: url("Images/layout/Red.gif");
+    background-repeat: no-repeat;
+    margin-left: -340px;
+
+}
+#ourpkm{
+    position: fixed;
+    top: 246px;
+    left: 99px;
+    z-index: 12;
+    width: 210px;
+    height: 150px;
+    background-repeat: no-repeat;
+    margin-left: -1000px;
+
+}
+#otherpoke{
+    position: fixed;
+    top: 246px;
+    left: 99px;
+    z-index: 12;
+    width: 210px;
+    height: 150px;
+    background-repeat: no-repeat;
+    margin-left: -1000px;
+}
+#combat{
+    display: none;
+}
+#bankpkm{
+    display: none;
+    position: fixed !important;
+    width: 882px;
+    height: 539px;
+    z-index: 13;
+    top: 17px;
+    left: 14px;
+    border-radius: 2px;
+    flex-wrap: wrap;
+    background-color: black;
+    color: white;
+    overflow: auto;
+    
+}
+#bankpkm div{
+    width: 24%;
+    text-align: center;
+    border: 2px solid;
+}
+#eqppkm div{
+    position: fixed !important;
+    width: 107px;
+    height: 102px;
+    z-index: 10;
+    top: 592px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 255, 0);
+    border: 5px solid black;
+}
+#pkm1{
+    left: 32px;
+}
+#pkm2{
+    left: 173px;
+}
+#pkm3{
+    left: 319px;
+}
+#pkm4{
+    left: 464px;
+}
+#pkm5{
+    left: 605px;
+}
+#pkm6{
+    left: 747px;
+}
+#text{
+    position: fixed !important;
+    width: 601px;
+    height: 84px;
+    z-index: 13;
+    top: 469px;
+    left: 49px;
+}
+#switch{
+    position: fixed !important;
+    width: 236px;
+    height: 375px;
+    z-index: 11;
+    top: 17px;
+    left: 654px;
+    border-radius: 2px;
+    background-color: grey;
+    border: 3px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    display: none;
+}
+#switch div{
+    width: 49%;
+    border: 3px solid white;
+}
+#name{
+    position: fixed;
+    top: 30px;
+    left: 30px;
+    width: 200px;
+    background-color: white;
+    padding: 10px;
+}
+#mypokname{
+    position: fixed;
+    top: 333px;
+    left: 420px;
+    width: 200px;
+    background-color: white;
+    padding: 10px;
+}

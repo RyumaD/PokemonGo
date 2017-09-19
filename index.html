@@ -4,32 +4,123 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet"  href="CSS/styles.css">
-    <title>JavaScript POO</title>
+    <link rel="stylesheet"  href="jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet"  href="CSS/style.css">
+    <title>PokemonGo</title>
 </head>
 <body>
-    <div id='Menu'>
-        <div id='capture'>
-            <div id='name'>edfdfdfsefzergzrgrzgzrgrzgzrgrzgzrg</div>
-            <div id='pokemon'>e</div>
-            <div id='player'><img src="CSS/Images/red.png" alt="" width="40%"></div>
-            <div id='pokeball'><input type="submit" value="PokeBall Go !!!"></div>
-        </div>
-        <div id='pokedex'></div>
+    <div id="divevent">
+        <h3>Type-Event</h3>
+        <form id="event">
+            <select name="type" id="type">
+                <option>Type</option>
+                <option>Acier</option>
+                <option>Combat</option>
+                <option>Dragon</option>
+                <option>Eau</option>
+                <option>Electrik</option>
+                <option>Fee</option>
+                <option>Feu</option>
+                <option>Glace</option>
+                <option>Insecte</option>
+                <option>Normal</option>
+                <option>Plante</option>
+                <option>Poison</option>
+                <option>Psy</option>
+                <option>Roche</option>
+                <option>Sol</option>
+                <option>Spectre</option>
+                <option>Tenebres</option>
+                <option>Vol</option>
+            </select>
+            <input type="text" placeholder = "date-debut" id="date_debut">
+            <input type="text" placeholder = "date-fin" id="date_fin">
+            <input type="submit" id="sub">
+        </form>
+        <ul id="datevent"></ul>
     </div>
+    <button id="spawn">Creation de Pokemon</button>
+    <button id="dex"></button>
+    <div id="combat">
+        <div id='capture'>
+            <div id='name'></div>
+            <div id="mypokname"></div>
+            <div id='pokemon'></div>
+            <div id='player'></div>
+            <div id='ourpkm'></div>
+            <div id="otherpoke"></div>
+            <div id="pkmhp"></div>
+        </div>
+        <div id='pokeball'>
+            <form id="attaque">
+                <input type="submit" value="Attaque">
+            </form>
+            <form id="teampoke">
+                <input type="submit" value="Pokemon">
+            </form>
+            <form id="sac">
+                <input type="submit" value="Sac">
+            </form>
+            <form id="fuite">
+                <input type="submit" value="Fuite">
+            </form>
+        </div>
+        <div id="menu">
+            <div id="sacoche">
+                <form id="pokeballe">
+                    <input type="submit" value="Pokeball">
+                </form>
+                <form id="soin">
+                    <input type="submit" value="Soin">
+                </form> 
+                <div id="difball"></div>
+                <div id="difsoin"></div>
+            </div>
+            <div id="switch">
+                <div id="sw1"></div>
+                <div id="sw2"></div>
+                <div id="sw3"></div>
+                <div id="sw4"></div>
+                <div id="sw5"></div>
+                <div id="sw6"></div>
+            </div>
+        </div>
+        <div id="cbttext">
+            <div id="text"></div>
+        </div>
+    </div>
+    
+    <div id='pokedex'>
+        <div id="listedex">
+            <div id="listage">
+                <ol id="allpokemon">
 
+                </ol>
+            </div>
+        </div>
+        <div id="imgpokemon"></div>
+        <div id="astuce">Saviez vous qu'il existe plus de 151 pokemon !</div>
+    </div>
+    <div id="bankpkm"></div>
+    <div id="eqppkm">
+        <div id="pkm1"></div>
+        <div id="pkm2"></div>
+        <div id="pkm3"></div>
+        <div id="pkm4"></div>
+        <div id="pkm5"></div>
+        <div id="pkm6"></div>
+    </div>
     <div id="map">
 
     </div>
-    
-    <button id="spawn">Spawn</button>
-
 
     <script src="JS/jquery.js"></script>
+    <script src="jquery-ui/jquery-ui.min.js"></script>
     <script src="JS/Classe/App.js"></script>
     <script src="JS/Classe/Random.js"></script>
     <script src="JS/Classe/Player.js"></script>
     <script src="JS/Classe/Pokemon.js"></script>
+    <script src="JS/Classe/Pokarray.js"></script>
     <script src="JS/script.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAyqR-rcjrpMqhmHOvj5vWmLi9VYf57K34&callback=app.initMap&libraries=geometry"
     async defer></script>
